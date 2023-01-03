@@ -2,6 +2,8 @@ package com.proyect.bingoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -11,7 +13,7 @@ import java.util.List;
 
 public class BingoActivity extends AppCompatActivity {
 
-    TextView numero;
+    TextView numero, bola;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,10 @@ public class BingoActivity extends AppCompatActivity {
     public void empezar(View view) {
 
         numero = (TextView) findViewById(R.id.textBola);
+        bola = (TextView) findViewById(R.id.Numero3);
+
+        bola.setBackgroundResource(R.drawable.circulo_rojo);
+        //bola.setBackgroundColor(Color.parseColor("#E80909"));
         final List<Integer> arrayBolasInicial = this.sacarBolas();
 
 
@@ -38,6 +44,7 @@ public class BingoActivity extends AppCompatActivity {
             @Override
             public void run() {
                 numero.setText((String) String.valueOf((arrayBolasInicial.get(i))+1));
+
                 i++;
                 if (i ==90)
                     i = 0;

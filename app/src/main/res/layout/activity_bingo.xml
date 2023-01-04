@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".BingoActivity">
 
+    <Button
+        android:id="@+id/buttonLinea"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="108dp"
+        android:onClick="lineaOBingo"
+        android:text="Linea"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Numero71"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMasTiempo2" />
+
     <TextView
         android:id="@+id/Numero90"
         android:layout_width="35dp"
@@ -1650,18 +1666,81 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="166dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="163dp"
-        android:layout_marginEnd="468dp"
-        android:layout_marginBottom="141dp"
-        android:onClick="empezar"
-        android:text="Button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="460dp"
+        android:layout_marginBottom="41dp"
+        android:onClick="reiniciar"
+        android:text="Reiniciar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonInicioPausa"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.848" />
+        />
+
+    <Button
+        android:id="@+id/buttonInicioPausa"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="41dp"
+        android:onClick="empezar"
+        android:text="Comenzar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMenosTiempo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="75dp"
+        android:onClick="menosTiempo"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInicioPausa"
+        app:layout_constraintEnd_toStartOf="@+id/textTiempo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBola"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonMasTiempo2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="75dp"
+        android:onClick="masTiempo"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/Numero51"
+        app:layout_constraintStart_toEndOf="@+id/textTiempo"
+        app:layout_constraintTop_toBottomOf="@+id/textBola" />
+
+    <TextView
+        android:id="@+id/textTiempo"
+        android:layout_width="39dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="89dp"
+        android:background="#D6D3D3"
+        android:gravity="center"
+        android:maxLength="2"
+        android:text="1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMasTiempo2"
+        app:layout_constraintStart_toEndOf="@+id/buttonMenosTiempo"
+        app:layout_constraintTop_toBottomOf="@+id/textBola" />
 </androidx.constraintlayout.widget.ConstraintLayout>

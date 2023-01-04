@@ -18,7 +18,7 @@ public class BingoActivity extends AppCompatActivity {
 
     TextView numero, bola, tiempoRegulable, lineaOBingo;
     Button inicioPausa;
-    int tiempo = 1000;
+    int tiempo = 3000;
     String estado=null;
 
     int i = 0;
@@ -80,6 +80,7 @@ public class BingoActivity extends AppCompatActivity {
 
         arrayBolasInicial = this.sacarBolas();
         inicioPausa.setText("Comenzar");
+        lineaOBingo.setText("Linea");
         estado="P"; //PAUSADO
         numero.setText("");
         lineaOBingo.setVisibility(View.GONE);
